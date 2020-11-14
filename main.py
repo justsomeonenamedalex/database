@@ -20,53 +20,38 @@ cursor = conn.cursor() #create a cursor object using the connection object retur
 print ("Successfully connected to database")
 
 while True:
-    date = input ("please enter a date: ")
+    date = input("please enter a date: ")
 
-    rider_firstname = input ("Please enter the rider's first name: ")
-    rider_firstname = rider_firstname.title()
+    rider_firstname = input("Please enter the rider's first name: ").title()
 
-    rider_surname = input ("Please enter the rider's surname: ")
-    rider_surname = rider_surname.title()
+    rider_surname = input("Please enter the rider's surname: ").title()
 
-    email = input ("Please enter the email address of the rider or rider's guardian: ")
+    email = input("Please enter the email address of the rider or rider's guardian: ")
     
-    instructor = input ("Please enter the instructor's name: ")
-    instructor = instructor.title()
+    instructor = input("Please enter the instructor's name: ").title()
     
-    lessontype = input ("Please enter what type of lesson it is: ")
+    lessontype = input("Please enter what type of lesson it is: ")
     
-    horse = input ("Please enter the horse's name: ")
-    horse = horse.title()
+    horse = input("Please enter the horse's name: ").title()
     
     bookings = int(input ("How many bookings are there: "))
     
-    arena = input ("What arena is it in: ")
-    arena = arena.title()
-    
-    print (" ")
-    print ("The data you inputted was: ")
-    print ("Date: " + date)
-    print (" ")
-    print ("The rider's first name: " + rider_firstname)
-    print (" ")
-    print ("The rider's surname: " + rider_surname)
-    print (" ")
-    print ("The email of the rider or rider's guardian: " + email)
-    print (" ")
-    print ("The lesson instructor: " + instructor)
-    print (" ")
-    print ("The lesson type" + lessontype)
-    print (" ")
-    print ("The horse's name: " + horse)
-    print (" ")
-    print ("The numeber of bookings: " + str(bookings))
-    print (" ")
-    print ("The lesson arena: " + arena)
-    print (" ")
-    check = input ("Is this correct? y/n ")
-    if check == ("y"):
-        break
-    elif check == ("yes"):
+    arena = input("What arena is it in: ").title()
+
+    print("\nThe data you inputted was: ")
+    print("\nDate: " + date)
+
+    print("\nThe rider's first name: " + rider_firstname)
+    print("\nThe rider's surname: " + rider_surname)
+    print("\nThe email of the rider or rider's guardian: " + email)
+    print("\nThe lesson instructor: " + instructor)
+    print("\nThe lesson type" + lessontype)
+    print("\nThe horse's name: " + horse)
+    print("\nThe numeber of bookings: " + str(bookings))
+    print("\nThe lesson arena: " + arena)
+
+    check = input("\nIs this correct? y/n ").lower()
+    if check in ["y", "yes"]:
         break
 
 try:
